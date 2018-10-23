@@ -1,4 +1,3 @@
-window.API_KEY_UNSPLASH = '9f437e9a2441442665cd4e650cd7a55fdd2c6d1ad6ad28474ed558a4ad3ffc13'
 window.API_URL_UNSPLASH = 'https://api.unsplash.com'
 
 var GET_RANDOM_IMAGE = API_URL_UNSPLASH + '/photos/random?client_id=' + API_KEY_UNSPLASH
