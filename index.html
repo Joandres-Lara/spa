@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
  <meta charset="UTF-8">
  <title>Single Page Application</title>
- <link rel="icon" type="icon/image" href="https://solucionessore.com/src/images/favicon-sore.ico">
- <link rel="stylesheet" href="index.css">
+ <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
- <div class="header clear-fix">
-  <h1>Single Page Application</h1>
+ <div class="clear-fix bg-dark">
+  <h1 class="header-one">Single Page Application</h1>
  </div>
- <div class="main flex clear-fix">
-  <div class="navbar">
-   <ul class="nav">
-    <li><a href="/save-images" onclick="event.preventDefault(); $location('save-images')">Guardadas</a></li>
-    <li><a href="/random-images" onclick="event.preventDefault(); $location('random-images')">Aleatorias</a></li>
+ <div class="container-flex">
+  <div class="navbar container">
+   <ul>
+    <li><a href="#imagenes" onclick="event.preventDefault(); $location('/save-images');">Imágenes</a></li>
+    <li><a href="#random" onclick="event.preventDefault(); $location('/random-images');">Aleatorias</a></li>
    </ul>
   </div>
-  <div class="main-body">
-   <h2 class="text-center">Imágenes aleatorias</h2>
-   <button onclick="getAndMountRandomImage('small', null, 'div')">Más</button>
-   <div id="container-images-random"></div>
+  <div class="main container">
+   <div class="tools" id="tools">
+    <button class="default-button" onclick="$location('/random-images', true)">Más</button>
+   </div>
+   <div class="main-body clear-fix" id="main"></div>
   </div>
  </div>
  <script type="text/javascript" src="database.js"></script>
- <script type="text/javascript" src="routes.js"></script>
+ <script type="text/javascript" src="data.js"></script>
+ <script type="text/javascript" src="location.js"></script>
+ <script type="text/javascript" src="util.js"></script>
  <script type="text/javascript" src="unsplash.js"></script>
  <script type="text/javascript" src="index.js"></script>
 </body>
